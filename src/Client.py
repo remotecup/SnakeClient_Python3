@@ -45,6 +45,9 @@ def run():
             continue
         message = parse(message_rcv[0])
         if message.type == 'MessageClientConnectResponse':
+            if message.id == -1:
+                print('your name is duplicated!!!')
+                exit(-1)
             print('my id is ' + str(message.id))
             world.set_id(message.id, message.ground_config['goal_id'])
             break
