@@ -49,7 +49,6 @@ class World:
         self.cycle = message.cycle
         self.walls.clear()
         n = 0
-        print(message.world)
         for s in self.snakes:
             self.snakes[s].reset(list(message.score.keys())[n])
             n += 1
