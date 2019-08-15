@@ -63,13 +63,14 @@ class World:
                     self.walls.append(Vector2D(i, j))
 
         for s in self.snakes:
-            self.snakes[s].set_head(Vector2D(message.world['heads'][self.snakes[s].name][0], message.world['heads'][self.snakes[s].name][1]))
+            id = message.name_id[self.snakes[s].name]
+            self.snakes[id].set_head(Vector2D(message.world['heads'][self.snakes[s].name][0], message.world['heads'][self.snakes[s].name][1]))
 
     def get_self(self):
         return self.snakes[self.self_id]
 
     def get_snake(self, id):
-        return self.snakes[self.id]
+        return self.snakes[id]
 
     def get_walls(self):
         return self.walls
