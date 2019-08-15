@@ -64,6 +64,7 @@ def run():
             world.update(message)
             world.print()
 
+            action = ""
             if args.client_type == 'greedy' or (args.client_type == 'auto' and world.self_id == 1):
                 action = c_greedy.get_action(world)
             elif args.client_type == 'random' or (args.client_type == 'auto' and world.self_id >= 2):

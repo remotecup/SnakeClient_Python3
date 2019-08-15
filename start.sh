@@ -15,7 +15,12 @@ teamname="SnakeBase"
 
 if [ $# -eq 1 ]
 then
-	teamname=$1
+	type=$1
+fi
+
+if [ $# -eq 2 ]
+then
+	teamname=$2
 fi
 
 opt="-s ${host} -p ${port} -n ${teamname} -c ${type}"
