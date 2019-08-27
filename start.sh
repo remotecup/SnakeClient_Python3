@@ -21,7 +21,7 @@ fi
 
 if [ $# -eq 2 ]
 then
-	teamname=$2
+	teamname=$1
 fi
 
 opt="-s ${host} -p ${port} -n ${teamname} -c ${type}"
