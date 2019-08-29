@@ -19,7 +19,7 @@ then
 	teamname=$2
 fi
 
-if [ $# -eq 2 ]
+if [ $# -eq 1 ]
 then
 	teamname=$1
 fi
